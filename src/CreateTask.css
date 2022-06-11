@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+
+}
+*:focus {
+    outline: none;
+}
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+.tasks_container{
+    justify-content: center;
+    display: flex;
+    margin: 50px 0px 0px;
+    animation: slide 0.5s;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 40em;
+
+    }
+    100% {
+
+    }
+}  
+
+.rendered_div{
+    display: flex;
+    width: 50vw;
+    justify-content:space-around;
+    align-items: center;
+
+}
+.rendered_delete{
+    height: 5em;
+    width: 5em;
+    display: flex;
+    background: url(./pictures/images.png);
+    background-size: 50px;
+    background-repeat:no-repeat;
+    background-position:center;
+    border: transparent;
+    position: relative;
+}
+.rendered_task{
+    min-width: 70%;
+    font-size: 40px;
+    margin: 0px 5em ;
+}
+.rendered_checkbox{
+    transform: scale(2);
+    background-color: green;
+}
+
+
+.title{
+    margin: 50px;
+    font-size: 120px ;
+    color: #2182dd;
+    
+}
+.input_div{
+    display: flex;
+    justify-content: center;
+    
+
+}
+.input{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 15em;
+    font-size: 60px;
+    border: #000 0px solid;
+    padding-left: 50px;
+    box-shadow: 0 0px 5px black;
+}
+
+.input:focus{
+    border: transparent;
+}
+.add{
+    font-family: 'Open Sans', sans-serif;
+    border: #000 0px solid;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 6em;
+    width: 5em;
+    box-shadow: 0 0px 5px black;
+}
