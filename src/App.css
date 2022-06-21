@@ -1,38 +1,120 @@
-.App {
+body{
+  background-color: rgb(39, 39, 39);
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
+
+}
+*:focus {
+  outline: none;
+}
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.tasks_container{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+  margin: 50px 0px 0px;
+  animation: slide 0.5s;
+}
+
+@keyframes slide {
+  0% {
+      margin-left: 40em;
+
+  }
+  100% {
+
+  }
+}  
+
+.rendered_div{
+  display: flex;
+  width: 50vw;
+  justify-content:space-around;
+  align-items: center;
+  background: rgb(70, 70, 70);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.rendered_delete{
+  font-size: 2em;
+  font-weight: 800;
+  color: aqua;
+  background: transparent;
+  height: fit-content;
+  width: 5em;
+  display: flex;
+  border: transparent;
+  position: relative;
+  text-shadow: 0px 0px 5px rgb(175, 218, 255);
+}
+.rendered_task{
+  
+  min-width: 70%;
+  font-size: 40px;
+  margin: 0px 5em ;
+}
+.rendered_checkbox{
+  transform: scale(3);
+  background: #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.title{
+  margin: 50px;
+  font-size: 120px ;
+  color: #b0ceff;
+  text-shadow: 0px 0px 10px rgb(0, 170, 255);
+  
+}
+.input_div{
+  display: flex;
+  justify-content: center;
+  
+
+}
+.input{
+  text-align: center;
+  background: transparent;
+  width: 15em;
+  font-size: 60px;
+  border-bottom: rgb(23, 175, 240) 2px solid;
+  padding-left: 2em;
+  border: transparent;
+  z-index: 1;
+  color: white;
+}
+.input_div::after{
+  top: 22em;
+  z-index: 2;
+  position: absolute;
+  display: block;
+  content: '';
+  width: 40%;
+  height: 0.2em;
+  background: rgb(0, 187, 255);
+  box-shadow: 0px 0px 2px rgb(151, 255, 255);
+}
+.input:focus{
+  border: transparent;
+}
+.add{
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background: rgb(70, 70, 70);
+  box-shadow:0px 0px 10px rgb(117, 177, 255);
+  border-radius: 50px;
+  border: transparent;
+  height: 6em;
+  width: 9em;
 }

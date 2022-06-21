@@ -1,6 +1,5 @@
 import './App.css';
 import CreateTask from './CreateTask';
-import './CreateTask.css'
 
 function App() {
   return (
